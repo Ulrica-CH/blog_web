@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
   width: 100%;
 
   .info-card {
-    height: 29rem;
+    // height: 29rem;
   }
 
   .right-card {

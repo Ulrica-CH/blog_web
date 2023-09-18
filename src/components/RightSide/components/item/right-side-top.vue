@@ -1,36 +1,38 @@
 <template>
   <div class="info-background" v-image :data-src="configDetail.avatar_bg">
-    <el-image fit="cover" style="width: 100%; height: 100%" :src="configDetail.avatar_bg">
+    <el-image fit="cover" style="width: 100%; height: 6.25rem" :src="configDetail.avatar_bg">
       <template #error>
         <svg-icon name="image" :width="10" :height="10"></svg-icon>
       </template>
     </el-image>
   </div>
   <div class="info-avatar">
-    <router-link to="/"><el-avatar :src="configDetail.blog_avatar || avatar" /> </router-link>
+    <router-link to="/">
+      <!-- <el-avatar :src="configDetail.blog_avatar || avatar" /> -->
+    </router-link>
     <span class="blog-name">{{ configDetail.blog_name }} </span>
   </div>
   <div class="personal-say">{{ configDetail.personal_say }}</div>
   <div class="common-menu flex_r_between">
-    <span class="flex_c_center" @click="operate('goToArchives')">
+    <span class="flex_c_center menu_item" @click="operate('goToArchives')">
       <span class="common-menu__label to_pointer">文章</span>
       <span class="common-menu__value to_pointer">{{ configDetail.articleCount }}</span>
     </span>
-    <span class="flex_c_center" @click="operate('goToCategory')">
+    <span class="flex_c_center menu_item" @click="operate('goToCategory')">
       <span class="common-menu__label to_pointer">分类</span>
       <span class="common-menu__value to_pointer">{{ configDetail.categoryCount }}</span>
     </span>
-    <span class="flex_c_center" @click="operate('goToTag')">
+    <span class="flex_c_center menu_item" @click="operate('goToTag')">
       <span class="common-menu__label to_pointer">标签</span>
       <span class="common-menu__value to_pointer">{{ configDetail.tagCount }}</span>
     </span>
   </div>
-  <div class="git-ee flex_r_around">
+  <!-- <div class="git-ee flex_r_around">
     <span class="git-ee__item button-animated" @click="operate('openLink', configDetail.git_ee_link)">
       <i class="iconfont icon-gitee2"> </i>
       <span class="git-ee__item-text"> My Gitee</span>
     </span>
-  </div>
+  </div> -->
   <div class="personal-link flex_r_around">
     <i class="iconfont icon-bilibili-line to_pointer" @click="operate('openLink', configDetail.bilibili_link)"></i>
     <i class="iconfont icon-github-fill to_pointer" @click="operate('openLink', configDetail.github_link)"></i>
@@ -85,7 +87,8 @@ const operate = (op, val) => {
 </script>
 <style lang="scss" scoped>
 .info-background {
-  height: 8rem;
+  // height: 8rem;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -94,42 +97,50 @@ const operate = (op, val) => {
 
 .info-avatar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 80%;
+  padding: .6rem 0;
+  background-color: #f2f6fc;
+  border-radius: 0.625rem;
 
-  .el-avatar {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    transition: ease-in-out 1s;
-    background-color: #fff;
-    margin: -2rem 0 0 1rem;
-
-    &:hover {
-      transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-    }
-  }
 
   .blog-name {
-    padding: 0.5rem 0 0 0.5rem;
+    // padding: 0.5rem 0 0 0.5rem;
     color: #222;
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
 .personal-say {
-  height: 5rem;
-  padding: 8px;
   color: var(--font-color-title);
-  font-size: 1em;
-  font-family: "DYBlack", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 80%;
+  padding: .6rem 0;
+  background-color: #f2f6fc;
+  border-radius: 0.625rem;
+  font-size: 1.145rem;
+  text-align: center;
+  letter-spacing: .15rem;
 }
 
 .common-menu {
   font-size: 1rem;
   color: #1f2d3d;
   font-weight: 1.4rem;
-  padding: 1.5rem 3.5rem;
+  padding: 0.625rem 0.25rem;
+  
+  .menu_item{
+    background-color: #f2f6fc;
+  border-radius: 0.625rem;
+  margin: 0 0.625rem;
+  padding:  0.625rem;
+
+  }
 
   &__label {
     color: #533737;

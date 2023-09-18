@@ -64,6 +64,14 @@ const routes = [
         component: () => import('@/views/mine/mine.vue'),
       },
       {
+        path: '/log',
+        name: 'Log',
+        meta: {
+          name: '我的',
+        },
+        component: () => import('@/views/log/log.vue'),
+      },
+      {
         path: '/article',
         name: 'Article',
         meta: {

@@ -120,7 +120,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="home_center_box">
-    <div class="tip">公告</div>
+    <div class="tip">目前来看，代码有点混乱，可能需要较长时间去重构；考虑使用上 TS；另外要完善个人信息以及建站日志。</div>
     <el-row>
       <el-col :xs="24" :sm="18">
         <el-card
