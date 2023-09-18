@@ -7,69 +7,77 @@ import navPage from '@/views/index.vue'
 
 const routes = [
   {
-    path: "/",
-    name: "Nav",
+    path: '/',
+    name: 'Nav',
     meta: {
-      name: '导航'
+      name: '导航',
     },
-    component: navPage
+    component: navPage,
   },
   {
     path: '/',
     name: 'Layout',
     meta: {
-      name: 'Layout'
+      name: 'Layout',
     },
     component: Layout,
     redirect: '/home',
     children: [
       {
-        path: "/home",
-        name: "home",
+        path: '/home',
+        name: 'home',
         meta: {
-          name: "首页",
+          name: '首页',
         },
         component: () => import('@/views/home/home.vue'),
       },
       {
-        path: "/archives",
-        name: "Archives",
+        path: '/archives',
+        name: 'Archives',
         meta: {
-          name: "时间轴",
+          name: '时间轴',
         },
-        component: () => import("@/views/archives/archives.vue"),
+        component: () => import('@/views/archives/archives.vue'),
       },
       {
-        path: "/category",
-        name: "Category",
+        path: '/category',
+        name: 'Category',
         meta: {
-          name: "分类",
+          name: '分类',
         },
-        component: () => import("@/views/category/category.vue"),
+        component: () => import('@/views/category/category.vue'),
       },
       {
-        path: "/tag",
-        name: "Tag",
+        path: '/tag',
+        name: 'Tag',
         meta: {
-          name: "标签",
+          name: '标签',
         },
-        component: () => import("@/views/tag/tag.vue"),
+        component: () => import('@/views/tag/tag.vue'),
       },
       {
-        path: "/article",
-        name: "Article",
+        path: '/mine',
+        name: 'Mine',
         meta: {
-          name: "文章",
+          name: '我的',
         },
-        component: () => import("@/views/article/article.vue"),
+        component: () => import('@/views/mine/mine.vue'),
       },
       {
-        path: "/articleList",
-        name: "ArticleList",
+        path: '/article',
+        name: 'Article',
         meta: {
-          name: "文章列表",
+          name: '文章',
         },
-        component: () => import("@/views/article/article-list.vue"),
+        component: () => import('@/views/article/article.vue'),
+      },
+      {
+        path: '/articleList',
+        name: 'ArticleList',
+        meta: {
+          name: '文章列表',
+        },
+        component: () => import('@/views/article/article-list.vue'),
       },
       // {
       //   path: "/photoAlbum",
@@ -138,12 +146,12 @@ const routes = [
       //   component: () => import("@/views/resources/site-list.vue"),
       // },
       {
-        path: "/userCenter",
-        name: "UserCenter",
+        path: '/userCenter',
+        name: 'UserCenter',
         meta: {
-          name: "个人中心",
+          name: '个人中心',
         },
-        component: () => import("@/views/user/user-center.vue"),
+        component: () => import('@/views/user/user-center.vue'),
       },
       // {
       //   path: "/message",
@@ -180,31 +188,31 @@ const routes = [
       //     }
       //   ]
       // },
-    ]
+    ],
   },
   {
-    path: "/login",
-    name: "Login",
+    path: '/login',
+    name: 'Login',
     meta: {
-      name: "用户登录",
+      name: '用户登录',
     },
-    component: () => import("@/views/user/login-register.vue"),
+    component: () => import('@/views/user/login-register.vue'),
   },
   {
-    path: "/register",
-    name: "Register",
+    path: '/register',
+    name: 'Register',
     meta: {
-      name: "用户注册",
+      name: '用户注册',
     },
-    component: () => import("@/views/user/login-register.vue"),
+    component: () => import('@/views/user/login-register.vue'),
   },
   {
-    path: "/:pathMatch(.*)*",
-    name: "404",
+    path: '/:pathMatch(.*)*',
+    name: '404',
     meta: {
-      name: "404 not found",
+      name: '404 not found',
     },
-    component: () => import("@/views/404/index.vue"),
+    component: () => import('@/views/404/index.vue'),
   },
 ];
 

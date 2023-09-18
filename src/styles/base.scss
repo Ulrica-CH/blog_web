@@ -28,7 +28,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+a{
+  text-decoration: none;
+}
 a:focus,
 a:active {
   outline: none;
@@ -61,25 +63,29 @@ div:focus {
 }
 
 .layout {
+  background: #f3f6fc;
   // background: linear-gradient(90deg, #ffffff 1%, #ead2ea 10.2%, #e4d5ee 19.6%, #d1def3 36.8%, #b5dee5 62.2%, #cfebf3 88.9%, #ffffff 99%) !important;
 }
 .gradient {
   background: rgb(255, 255, 255, 0.7);
   background: linear-gradient(120deg, #f8feff, #dffbff, #faedff, #e0eeff, #f5f5d2, #fffff9);
 }
-
-.header_box {
-  position: fixed;
+.header-wrap{
+position: fixed;
   top: 0;
   left: 0;
-  z-index: 2001;
+  right: 0;
   width: 100%;
+}
+.header_box {
+  z-index: 2001;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1296px;
   height: 3.6rem;
-  background-color: #fff;
   overflow: hidden;
   box-sizing: border-box;
-  box-shadow: 0px -1px 3px var(--primary);
-  background: rgb(255, 255, 255, 0.7);
+
 }
 .main_box {
   box-sizing: border-box;
@@ -236,7 +242,7 @@ div:focus {
 // pc
 @media screen and (min-width: 768px) {
   .home_center_box {
-    padding-top: 100px;
+    // padding-top: 100px;
     max-width: 1200px;
     margin: 0 auto;
     min-height: calc(100vh - 128px);

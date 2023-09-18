@@ -171,9 +171,11 @@ onBeforeUnmount(() => {
 .article-box{
 display: flex;
 flex-direction: column;
+overflow: hidden;
 .article-cover {
   width: 100%;
   object-fit: contain;
+  max-height: 10.25rem;
   .image {
     width: 100%;
     height: 100%;

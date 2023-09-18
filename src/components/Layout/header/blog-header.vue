@@ -97,8 +97,10 @@ onMounted(() => {
   <div class="header_box" :class="headerState.headerClass">
     <div class="pc_menu flex_r_between">
       <div class="sub-avatar">
-        <router-link class="flex_r_around" v-if="getBlogAvatar" to="/"
-          ><el-avatar class="el-avatar mr-2" :src="getBlogAvatar" /> MichstaBe
+        <router-link class="flex_r_around text-2xl" v-if="getBlogAvatar" to="/"
+          >
+          <!-- <el-avatar class="el-avatar mr-2" :src="getBlogAvatar" />  -->
+          MichstaBe
         </router-link>
         <MessageBox
           class="ml-[10px]"
@@ -134,6 +136,9 @@ onMounted(() => {
           >
           <el-menu-item index="/tag"
             ><i class="iconfont icon-label_fill"></i> 标签</el-menu-item
+          >
+          <el-menu-item index="/mine"
+            ><i class="iconfont icon-liuyan"></i> 我的</el-menu-item
           >
           <!-- <el-menu-item index="/photoAlbum"><i class="iconfont icon-paper"></i> 相册</el-menu-item>
           <el-menu-item index="/talk"><i class="iconfont icon-speechbubble"></i> 说说</el-menu-item>
