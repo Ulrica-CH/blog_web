@@ -1,6 +1,9 @@
 <script setup >
 const activities = [
-
+{
+    content: "全局Scss，黑色主题Mixin",
+    timestamp: "2023-09-19",
+  },
   {
     content: "Github Actions 自动化部署，首页样式调整",
     timestamp: "2023-09-18",

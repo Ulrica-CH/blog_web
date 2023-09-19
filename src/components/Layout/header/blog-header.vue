@@ -240,7 +240,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .header_box {
   .sub-avatar {
-    padding: 5px 0 0 0;
+    // padding: 5px 0 0 0;
     display: flex;
     align-items: center;
   }

@@ -323,3 +323,7 @@ position: fixed;
   background-image: -webkit-linear-gradient(45deg, rgb(171, 245, 218) 25%, transparent 25%, transparent 50%, rgb(150, 212, 236) 50%, rgb(239, 147, 228) 75%, transparent 75%, transparent);
   border-radius: 2em;
 }
+@mixin darkStyle() {
+  background: #121212;
+  color: #e8e8e8;
+}

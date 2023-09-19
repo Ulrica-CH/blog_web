@@ -1,0 +1,6 @@
+@import './variable.scss';
+@mixin darkStyle() {
+  background: $dark-back-color;
+  color: $dark-text-color;
+  border: 1px solid $dark-back-color;
+}
