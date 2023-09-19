@@ -1,6 +1,10 @@
 <template>
   <div class="info-background" v-image :data-src="configDetail.avatar_bg">
-    <el-image fit="cover" style="width: 100%; height: 6.25rem" :src="configDetail.avatar_bg">
+    <el-image
+      fit="cover"
+      style="width: 100%; height: 6.25rem"
+      :src="configDetail.avatar_bg"
+    >
       <template #error>
         <svg-icon name="image" :width="10" :height="10"></svg-icon>
       </template>
@@ -12,19 +16,25 @@
     </router-link>
     <span class="blog-name">{{ configDetail.blog_name }} </span>
   </div>
-  <div class="personal-say">{{ configDetail.personal_say }}</div>
+  <!-- <div class="personal-say">{{ configDetail.personal_say }}</div> -->
   <div class="common-menu flex_r_between">
     <span class="flex_c_center menu_item" @click="operate('goToArchives')">
       <span class="common-menu__label to_pointer">文章</span>
-      <span class="common-menu__value to_pointer">{{ configDetail.articleCount }}</span>
+      <span class="common-menu__value to_pointer">{{
+        configDetail.articleCount
+      }}</span>
     </span>
     <span class="flex_c_center menu_item" @click="operate('goToCategory')">
       <span class="common-menu__label to_pointer">分类</span>
-      <span class="common-menu__value to_pointer">{{ configDetail.categoryCount }}</span>
+      <span class="common-menu__value to_pointer">{{
+        configDetail.categoryCount
+      }}</span>
     </span>
     <span class="flex_c_center menu_item" @click="operate('goToTag')">
       <span class="common-menu__label to_pointer">标签</span>
-      <span class="common-menu__value to_pointer">{{ configDetail.tagCount }}</span>
+      <span class="common-menu__value to_pointer">{{
+        configDetail.tagCount
+      }}</span>
     </span>
   </div>
   <!-- <div class="git-ee flex_r_around">
@@ -34,17 +44,29 @@
     </span>
   </div> -->
   <div class="personal-link flex_r_around">
-    <i class="iconfont icon-bilibili-line to_pointer" @click="operate('openLink', configDetail.bilibili_link)"></i>
-    <i class="iconfont icon-github-fill to_pointer" @click="operate('openLink', configDetail.github_link)"></i>
+    <i
+      class="iconfont icon-bilibili-line to_pointer"
+      @click="operate('openLink', configDetail.bilibili_link)"
+    ></i>
+    <i
+      class="iconfont icon-github-fill to_pointer"
+      @click="operate('openLink', configDetail.github_link)"
+    ></i>
 
     <el-popover placement="top" trigger="hover">
-      <el-image style="width: 100%; height: 100%" :src="configDetail.we_chat_link"></el-image>
+      <el-image
+        style="width: 100%; height: 100%"
+        :src="configDetail.we_chat_link"
+      ></el-image>
       <template #reference>
         <i class="iconfont icon-weixin1 to_pointer"></i>
       </template>
     </el-popover>
     <el-popover placement="top" trigger="hover">
-      <el-image style="width: 100%; height: 100%" :src="configDetail.qq_link"></el-image>
+      <el-image
+        style="width: 100%; height: 100%"
+        :src="configDetail.qq_link"
+      ></el-image>
       <template #reference>
         <i class="iconfont icon-QQ1 to_pointer"></i>
       </template>
@@ -53,9 +75,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import blogAvatar from "@/assets/img/blogAvatar.png";
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import blogAvatar from '@/assets/img/blogAvatar.png';
 
 const router = useRouter();
 const avatar = ref(blogAvatar); // 博客头像
@@ -70,16 +92,16 @@ const props = defineProps({
 /* operate start */
 const operate = (op, val) => {
   switch (op) {
-    case "goToCategory":
-      router.push("/category");
+    case 'goToCategory':
+      router.push('/category');
       break;
-    case "goToTag":
-      router.push("/tag");
+    case 'goToTag':
+      router.push('/tag');
       break;
-    case "goToArchives":
-      router.push("/archives");
+    case 'goToArchives':
+      router.push('/archives');
       break;
-    case "openLink":
+    case 'openLink':
       window.open(val);
       break;
   }
@@ -100,11 +122,10 @@ const operate = (op, val) => {
   justify-content: center;
   align-items: center;
   margin: 1rem auto;
-  width: 80%;
-  padding: .6rem 0;
+  width: 90%;
+  padding: 0.6rem 0;
   background-color: #f2f6fc;
   border-radius: 0.625rem;
-
 
   .blog-name {
     // padding: 0.5rem 0 0 0.5rem;
@@ -119,27 +140,34 @@ const operate = (op, val) => {
   justify-content: center;
   align-items: center;
   margin: 1rem auto;
-  width: 80%;
-  padding: .6rem 0;
+  width: 90%;
+  padding: 0.6rem 0;
   background-color: #f2f6fc;
   border-radius: 0.625rem;
   font-size: 1.145rem;
   text-align: center;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
 }
 
 .common-menu {
   font-size: 1rem;
   color: #1f2d3d;
   font-weight: 1.4rem;
-  padding: 0.625rem 0.25rem;
-  
-  .menu_item{
-    background-color: #f2f6fc;
-  border-radius: 0.625rem;
-  margin: 0 0.625rem;
-  padding:  0.625rem;
+  margin: 1rem auto;
+  width: 90%;
 
+  .menu_item {
+    background-color: #f2f6fc;
+    border-radius: 0.625rem;
+    margin: 0 0.625rem;
+    padding: 0.625rem 1.425rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #3275b1;
+      color: #fff;
+    }
   }
 
   &__label {
@@ -191,7 +219,7 @@ const operate = (op, val) => {
     left: 0;
     z-index: -1;
     background: var(--primary);
-    content: "";
+    content: '';
     transition: transform 0.5s ease-out;
     transform: scaleX(0);
     transform-origin: 0 50%;

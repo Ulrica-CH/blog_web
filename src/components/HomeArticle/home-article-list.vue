@@ -163,10 +163,12 @@ onBeforeUnmount(() => {
   // justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
 
 }
 .article-col{
-  width: 50%;
+  width: 59%;
+  margin-bottom: 1rem;
 }
 .article-box{
 display: flex;

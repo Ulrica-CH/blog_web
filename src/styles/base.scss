@@ -159,7 +159,8 @@ position: fixed;
 .to_pointer {
   transition: 0.3s ease-in-out;
   &:hover {
-    color: var(--primary);
+    // color: var(--primary);
+    color: #fff;
     cursor: pointer;
     &::before {
       color: var(--primary);
@@ -260,7 +261,7 @@ position: fixed;
     min-height: calc(100vh - 28rem);
   }
   .right-side-space {
-    padding: 7.5px 1.875px !important;
+    // padding: 7.5px 1.875px !important;
   }
   .mobile_menu {
     display: none;

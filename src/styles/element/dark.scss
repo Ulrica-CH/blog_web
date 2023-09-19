@@ -21,13 +21,18 @@ html.dark {
   }
 
   .info-avatar {
+    background: rgba(29, 30, 31, 0.3);
     .blog-name {
       color: var(--dark-font-color);
     }
   }
 
   .personal-say {
+    background: rgba(29, 30, 31, 0.3);
     color: var(--dark-font-color);
+  }
+  .menu_item {
+    background: rgba(29, 30, 31, 0.3);
   }
 
   .photoList-card {
