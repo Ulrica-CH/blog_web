@@ -167,7 +167,7 @@ onBeforeUnmount(() => {
 
 }
 .article-col{
-  width: 59%;
+  width: 49%;
   margin-bottom: 1rem;
 }
 .article-box{

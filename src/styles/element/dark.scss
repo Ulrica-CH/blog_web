@@ -21,16 +21,25 @@ html.dark {
       color: var(--dark-font-color);
     }
   }
-  .el-timeline {
-    width: 100%;
-    .el-timeline-item {
-      padding: 1rem 0;
-      :deep(.el-timeline-item__wrapper) {
-        // padding: 1rem 0;
-        .el-card {
-          padding: 1rem;
-          @include darkStyle();
+  .log {
+    .el-timeline {
+      width: 100%;
+      .el-timeline-item {
+        padding: 1rem 0;
+        :deep(.el-timeline-item__wrapper) {
+          // padding: 1rem 0;
+          .el-card {
+            padding: 1rem;
+            @include darkStyle();
+          }
         }
+      }
+    }
+  }
+  .study {
+    .el-card {
+      .item {
+        @include darkStyle();
       }
     }
   }

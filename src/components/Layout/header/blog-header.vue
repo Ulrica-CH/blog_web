@@ -143,6 +143,9 @@ onMounted(() => {
           <el-menu-item index="/log"
             ><i class="iconfont icon-liuyan"></i> 建站</el-menu-item
           >
+          <el-menu-item index="/study"
+            ><i class="iconfont icon-liuyan"></i> 学习计划</el-menu-item
+          >
           <!-- <el-menu-item index="/photoAlbum"><i class="iconfont icon-paper"></i> 相册</el-menu-item>
           <el-menu-item index="/talk"><i class="iconfont icon-speechbubble"></i> 说说</el-menu-item>
           <el-menu-item index="/message/list"><i class="iconfont icon-liuyan"></i> 留言</el-menu-item> -->
@@ -218,7 +221,10 @@ onMounted(() => {
               ><i class="iconfont icon-label_fill"></i> 标签</el-menu-item
             >
             <el-menu-item index="/log"
-            ><i class="iconfont icon-liuyan"></i> 建站</el-menu-item
+            ><i class="iconfont icon-liuyan"></i> 建站</el-menu-item>
+
+            <el-menu-item index="/study"
+            ><i class="iconfont icon-liuyan"></i> 学习计划</el-menu-item
           >
             <!-- <el-menu-item index="/photoAlbum"><i class="iconfont icon-paper"></i> 相册</el-menu-item>
             <el-menu-item index="/talk"><i class="iconfont icon-speechbubble"></i> 说说</el-menu-item>

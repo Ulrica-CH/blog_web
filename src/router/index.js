@@ -67,9 +67,17 @@ const routes = [
         path: '/log',
         name: 'Log',
         meta: {
-          name: '我的',
+          name: '建站',
         },
         component: () => import('@/views/log/log.vue'),
+      },
+      {
+        path: '/study',
+        name: 'Study',
+        meta: {
+          name: '学习',
+        },
+        component: () => import('@/views/study/index'),
       },
       {
         path: '/article',
