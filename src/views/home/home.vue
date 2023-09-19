@@ -120,7 +120,11 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="home_center_box">
-    <div class="tip">目前来看，代码有点混乱，可能需要较长时间去重构；考虑使用上 TS；另外要完善个人信息以及建站日志。</div>
+    <div class="tip">
+      <!-- 目前来看，代码有点混乱，可能需要较长时间去重构；考虑使用上
+      TS；另外要完善个人信息以及建站日志。 -->
+      稳步向前
+    </div>
     <el-row>
       <el-col :xs="24" :sm="18">
         <el-card
@@ -188,9 +192,9 @@ onBeforeUnmount(() => {
 </template>
 
 <style lang="scss" scoped>
-.home_center_box{
-  .tip{
-    width: 100% ;
+.home_center_box {
+  .tip {
+    width: 100%;
     height: 3.75rem;
     padding: 0.6rem 1rem;
     margin: 1rem 0;
@@ -201,7 +205,6 @@ onBeforeUnmount(() => {
     background: #fff;
     box-shadow: var(--box-shadow);
   }
-
 }
 .mobile-top-card {
   height: 31rem;

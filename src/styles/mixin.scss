@@ -1,6 +1,16 @@
 @import './variable.scss';
 @mixin darkStyle() {
-  background: $dark-back-color;
-  color: $dark-text-color;
+  background: $dark-back-color !important;
+  color: $dark-text-color !important;
   border: 1px solid $dark-back-color;
+}
+@mixin righItemStyle() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 90%;
+  padding: 0.6rem;
+  background-color: #f2f6fc;
+  border-radius: 0.625rem;
 }

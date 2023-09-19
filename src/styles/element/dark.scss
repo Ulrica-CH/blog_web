@@ -3,10 +3,16 @@ html.dark {
     background: rgba(29, 30, 31, 0.3);
   }
 
-  .header_box,.tip,.article-box,.menu_item,.md-preview-v3 {
+  .header_box,
+  .tip,
+  .article-box,
+  .menu_item,
+  .md-preview-v3,
+  .notice-text,
+  .author-card {
     @include darkStyle();
     box-shadow: 0px -1px 3px #1c1b1c;
-    border-radius: .625rem;
+    border-radius: 0.625rem;
     .el-menu-item {
       color: var(--dark-font-color);
     }
@@ -15,11 +21,24 @@ html.dark {
       color: var(--dark-font-color);
     }
   }
-.menu_item{
-  &:hover{
-    background-color: #5c5c5c;
+  .el-timeline {
+    width: 100%;
+    .el-timeline-item {
+      padding: 1rem 0;
+      :deep(.el-timeline-item__wrapper) {
+        // padding: 1rem 0;
+        .el-card {
+          padding: 1rem;
+          @include darkStyle();
+        }
+      }
+    }
   }
-}
+  .menu_item {
+    &:hover {
+      background-color: #5c5c5c;
+    }
+  }
   .layout {
     background: linear-gradient(
       90deg,
@@ -43,7 +62,6 @@ html.dark {
   .personal-say {
     @include darkStyle();
   }
-
 
   .photoList-card {
     background-color: rgba(0, 0, 0, 0.2);

@@ -27,7 +27,10 @@ let boxList = [],
   observe = null;
 const router = useRouter();
 const goToArticleList = (item) => {
-  router.push({ path: "articleList", query: { id: item.id, type: "tag", name: item.tag_name } });
+  router.push({
+    path: "articleList",
+    query: { id: item.id, type: "tag", name: item.tag_name },
+  });
 };
 
 onMounted(() => {
@@ -51,7 +54,10 @@ onBeforeUnmount(() => {
   <div class="right-side">
     <el-row>
       <el-col :span="24" class="right-side-space">
-        <el-card class="info-card card-hover animate__animated animate__fadeIn" shadow="hover">
+        <el-card
+          class="info-card card-hover animate__animated animate__fadeIn"
+          shadow="hover"
+        >
           <el-skeleton :loading="loading" animated>
             <template #template>
               <RightSideTopSkeleton />
@@ -63,7 +69,10 @@ onBeforeUnmount(() => {
         </el-card>
       </el-col>
       <el-col :xs="0" :sm="24" class="right-side-space">
-        <el-card class="right-card card-hover flex_c_center animate__animated animate__fadeIn" shadow="hover">
+        <el-card
+          class="right-card card-hover flex_c_center animate__animated animate__fadeIn"
+          shadow="hover"
+        >
           <el-skeleton :loading="loading" animated>
             <template #template>
               <RightSideSkeletonItem />
@@ -77,7 +86,10 @@ onBeforeUnmount(() => {
         </el-card>
       </el-col>
       <el-col :xs="0" :sm="24" class="right-side-space">
-        <el-card class="right-card card-hover flex_c_center animate__animated animate__fadeIn" shadow="hover">
+        <el-card
+          class="right-card card-hover flex_c_center animate__animated animate__fadeIn"
+          shadow="hover"
+        >
           <el-skeleton :loading="loading" animated>
             <template #template>
               <RightSideSkeletonItem />
@@ -85,7 +97,18 @@ onBeforeUnmount(() => {
             <template #default>
               <RightSideItem icon="icon-localoffer" title="标签">
                 <div class="notice-text">
-                  <span class="notice-text__item" v-for="(tag, index) in tags" :key="index" :style="{ color: tag.color }" @click="goToArticleList(tag)">{{ index + 1 == tags.length ? tag.tag_name : tag.tag_name + "&nbsp;&nbsp;" }}</span>
+                  <span
+                    class="notice-text__item"
+                    v-for="(tag, index) in tags"
+                    :key="index"
+                    :style="{ color: tag.color }"
+                    @click="goToArticleList(tag)"
+                    >{{
+                      index + 1 == tags.length
+                        ? tag.tag_name
+                        : tag.tag_name + "&nbsp;&nbsp;"
+                    }}</span
+                  >
                 </div>
               </RightSideItem>
             </template>
@@ -111,7 +134,9 @@ onBeforeUnmount(() => {
                   </div>
                   <div class="flex_r_between">
                     <span>博客访问次数：</span>
-                    <span class="value">{{ numberFormate(configDetail.view_time) }}</span>
+                    <span class="value">{{
+                      numberFormate(configDetail.view_time)
+                    }}</span>
                   </div>
                 </div>
               </RightSideItem>
@@ -138,7 +163,7 @@ onBeforeUnmount(() => {
 
     .card-title {
       font-size: 1.2rem;
-      line-height: 2.4;
+      // line-height: 2.4;
 
       .icon-gonggao {
         font-weight: 900;
@@ -157,16 +182,9 @@ onBeforeUnmount(() => {
     }
 
     .notice-text {
-      min-height: 6rem;
-      font-size: 1.1rem;
-      line-height: 1.2;
-      white-space: pre-line;
-
-      &__item {
-        display: inline-block;
-        font-weight: bold;
-        cursor: pointer;
-      }
+      @include righItemStyle();
+      width: 100%;
+      margin: 0;
     }
 
     .site-info {
